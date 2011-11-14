@@ -1,0 +1,173 @@
+html {
+  background: #bbb url(/img/grid-100x20-10-1x1-gray.png);
+  margin: 0;
+}
+
+body {
+  margin: 0 0 40px 0;
+  font-family: Helvetica;
+}
+
+h1 {
+  margin: 38px 0 22px 106px;
+  font-size: 83px;
+  line-height: 80px;
+  /* letter-spacing: 27.2px; */
+  letter-spacing: 26.1px;
+  word-spacing: 10px;
+  font-weight: normal;
+}
+
+ul {
+  margin: 0 0 20px 110px;
+  padding: 0;
+  overflow: visible;
+  height: 80px;
+}
+
+li {
+  display: block;
+  float:left;
+  width: 100px;
+  margin: 0 10px 0 0;
+}
+
+h2 {
+  margin: 20px 0 -4px 110px;
+  padding: 4px 0 0 0;
+  font-size: 21px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+p, address {
+  margin: 0 0 -5px 110px;
+  padding: 5px 0 0 0;
+  width: 760px;
+  line-height: 20px;
+  text-indent: 20px;
+  font-size: 16px;
+}
+
+p#plea {
+  margin-bottom: 35px;
+}
+
+li h2 {
+  margin-top: 0;
+  margin-left: 0;
+}
+
+input, select, textarea {
+  margin: 2px 0 0 -2px;
+  padding: 4px 1px 0;
+  border: 1px solid #bbb;
+  height: 32px; /* plus border */
+  font-family: Helvetica;
+  font-size: 28px;
+  width: 100px;
+}
+
+li input {
+  width: 100px;
+}
+
+#extra {
+  float: left;
+}
+
+#example-css-area {
+  margin-left: 440px;
+}
+
+#example-css-area h2 {
+  margin-left: 0;
+}
+
+#example-css {
+  margin-left: -2px;
+  width: 430px;
+  padding: 0 1px;
+  height: 96px;
+  font-family: Monaco;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+#column-count {
+  margin-left: 108px;
+}
+
+#color {
+  width: 214px;
+  height: 38px;
+  padding: 0;
+}
+
+li .stuff {
+  background: white;
+}
+
+#result {
+  margin-left: 108px;
+  width: 760px;
+}
+
+
+.white {
+  background-color: white;
+  color: black;
+}
+
+.black {
+  background-color: black;
+  color: white;
+}
+
+.white, .black {
+  margin: 40px 0;
+  padding-top: 20px;
+  border: none;
+  height: 240px;
+  font-family: Georgia;
+  overflow: hidden;
+}
+
+.example {
+  margin: 0 0 0 0;
+}
+
+.example h1 {
+  margin: 0;
+  font-family: Georgia;
+  font-size: 40px;
+  letter-spacing: 0;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+.example p {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  text-indent: 0;
+  font-size: medium;
+  line-height: 1.5em;
+}
+
+.example ul {
+  display: block;
+  float: right;
+  margin: 0;
+  height: auto;
+}
+
+.example li {
+  display: block;
+  float: left;
+  width: 60px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5em;
+}
+

@@ -1,0 +1,16 @@
+GRID MAKER
+
+See it in action at http://gridmaker.herokuapp.com/
+
+This is a quick hack to make those background images such as the ones you see
+on http://www.subtraction.com/2004/12/31/grid-computi and
+http://www.thegridsystem.org/. I've recently been reading about grid systems in
+web design, and I'm trying to teach myself the fundamentals. But I discovered
+that, especially when you want to experiment with lots of variations, drawing
+such a background image is time-consuming. Or maybe I just have no photoshop
+skills.
+
+Anyway, I made this tool for myself and those like me, who want an easy way to
+make grid-system background images.
+
+kr
