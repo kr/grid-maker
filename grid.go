@@ -40,51 +40,32 @@ const (
 //# lg   - line group - the number of lines in each group
 //# wash - one of: red orange yellow green blue purple brown gray
 func grid(cw, ls, gw, cg, lg int, wash string) (m *image.RGBA) {
-	in_gutter := func(x, c, g int) bool {
-		return x%(c+g) >= c
-	}
-
-	super_gutter := func(x, y int) bool {
-		return in_gutter(x, cw*cg+gw*(cg-1), gw)
-	}
-
-	gutter := func(x, y int) bool {
-		return in_gutter(x, cw, gw)
-	}
-
-	line_bot := func(x, y int) bool {
-		return ls > 1 && (y%ls) == (ls-1)
-	}
-
-	last_line := func(x, y int) bool {
-		return y%(ls*lg) >= (ls * (lg - 1))
-	}
-
-	alpha := func(x, y int) (a uint8) {
-		switch {
-		case line_bot(x, y):
-			return Line
-		case super_gutter(x, y):
-			return SuperGutter
-		case gutter(x, y):
-			return Gutter
-		case last_line(x, y):
-			return LastLine
-		}
-		return Bg
-	}
-
 	color := COLORS[wash]
 	width := cw*cg + gw*cg
 	height := lg * ls
 	m = image.NewRGBA(image.Rect(0, 0, width, height))
 	for y := 0; y < height; y++ {
 		for x := 0; x < width; x++ {
-			color.A = alpha(x, y)
+			switch {
+			case ls > 1 && (y%ls) == (ls-1):
+				color.A = Line
+			case inGutter(x, cw*cg+gw*(cg-1), gw):
+				color.A = SuperGutter
+			case inGutter(x, cw, gw):
+				color.A = Gutter
+			case y%(ls*lg) >= (ls * (lg - 1)):
+				color.A = LastLine
+			default:
+				color.A = Bg
+			}
 			m.Set(x, y, color)
 		}
 	}
 	return
+}
+
+func inGutter(x, c, g int) bool {
+	return x%(c+g) >= c
 }
 
 func atoi(s string) (i int) {
