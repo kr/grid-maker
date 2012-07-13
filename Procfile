@@ -1,1 +1,1 @@
-web: ./gridmaker
+web: grid-maker
